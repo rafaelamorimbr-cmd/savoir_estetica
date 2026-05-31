@@ -34,6 +34,19 @@ export default function BookingSection() {
   const [submitted, setSubmitted] = useState(false);
   const [step, setStep] = useState(1);
 
+  // Rola para o topo do formulário ao trocar de passo
+  const goToStep = (newStep: number) => {
+    setStep(newStep);
+    // pequeno delay para o React renderizar o novo passo antes do scroll
+    setTimeout(() => {
+      const el = document.getElementById("agendamento");
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }, 50);
+  };
+
   const daysInMonth = getDaysInMonth(calYear, calMonth);
   const firstDay = getFirstDayOfMonth(calYear, calMonth);
 
@@ -199,7 +212,7 @@ export default function BookingSection() {
                 <button
                   type="button"
                   disabled={!selectedService}
-                  onClick={() => setStep(2)}
+                  onClick={() => goToStep(2)}
                   className="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold disabled:opacity-40 hover:bg-primary/90 transition-all"
                 >
                   Próximo <ChevronRight size={16} />
@@ -289,13 +302,13 @@ export default function BookingSection() {
                 </div>
               </div>
               <div className="flex justify-between mt-8">
-                <button type="button" onClick={() => setStep(1)} className="flex items-center gap-2 text-muted-foreground hover:text-foreground px-4 py-3 rounded-full font-medium transition-colors">
+                <button type="button" onClick={() => goToStep(1)} className="flex items-center gap-2 text-muted-foreground hover:text-foreground px-4 py-3 rounded-full font-medium transition-colors">
                   <ChevronLeft size={16} /> Voltar
                 </button>
                 <button
                   type="button"
                   disabled={!selectedDate || !selectedTime}
-                  onClick={() => setStep(3)}
+                  onClick={() => goToStep(3)}
                   className="flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold disabled:opacity-40 hover:bg-primary/90 transition-all"
                 >
                   Próximo <ChevronRight size={16} />
@@ -378,7 +391,7 @@ export default function BookingSection() {
               </div>
 
               <div className="flex justify-between mt-8">
-                <button type="button" onClick={() => setStep(2)} className="flex items-center gap-2 text-muted-foreground hover:text-foreground px-4 py-3 rounded-full font-medium transition-colors">
+                <button type="button" onClick={() => goToStep(2)} className="flex items-center gap-2 text-muted-foreground hover:text-foreground px-4 py-3 rounded-full font-medium transition-colors">
                   <ChevronLeft size={16} /> Voltar
                 </button>
                 <button
