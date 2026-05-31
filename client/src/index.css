@@ -55,9 +55,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.12 0.005 90);
 
-  /* Dourado como cor primária */
-  --primary: oklch(0.72 0.14 75);
-  --primary-foreground: oklch(0.10 0.005 90);
+  /* Dourado como cor primária — mais vibrante */
+  --primary: oklch(0.76 0.17 75);
+  --primary-foreground: oklch(0.08 0.005 90);
 
   /* Cinza médio como secundário */
   --secondary: oklch(0.92 0.004 90);
@@ -67,28 +67,28 @@
   --muted-foreground: oklch(0.50 0.008 90);
 
   /* Dourado escuro como acento */
-  --accent: oklch(0.65 0.16 75);
-  --accent-foreground: oklch(0.10 0.005 90);
+  --accent: oklch(0.68 0.18 75);
+  --accent-foreground: oklch(0.08 0.005 90);
 
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.88 0.006 90);
   --input: oklch(0.88 0.006 90);
-  --ring: oklch(0.72 0.14 75);
+  --ring: oklch(0.76 0.17 75);
 
-  --chart-1: oklch(0.72 0.14 75);
+  --chart-1: oklch(0.76 0.17 75);
   --chart-2: oklch(0.50 0.005 90);
-  --chart-3: oklch(0.65 0.16 75);
+  --chart-3: oklch(0.68 0.18 75);
   --chart-4: oklch(0.35 0.005 90);
   --chart-5: oklch(0.80 0.10 80);
 
   --sidebar: oklch(0.97 0.003 90);
   --sidebar-foreground: oklch(0.12 0.005 90);
-  --sidebar-primary: oklch(0.72 0.14 75);
+  --sidebar-primary: oklch(0.76 0.17 75);
   --sidebar-primary-foreground: oklch(0.10 0.005 90);
   --sidebar-accent: oklch(0.92 0.004 90);
   --sidebar-accent-foreground: oklch(0.12 0.005 90);
   --sidebar-border: oklch(0.88 0.006 90);
-  --sidebar-ring: oklch(0.72 0.14 75);
+  --sidebar-ring: oklch(0.76 0.17 75);
 }
 
 @layer base {
@@ -99,6 +99,7 @@
     @apply bg-background text-foreground;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    font-size: 17px;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
@@ -171,8 +172,8 @@ html {
   transition: transform 0.25s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px oklch(0.72 0.14 75 / 0.18);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px oklch(0.76 0.17 75 / 0.22);
 }
 
 /* Button active scale */
@@ -207,7 +208,7 @@ button:active {
 
 /* Star rating */
 .star-filled {
-  color: oklch(0.72 0.14 75);
+  color: oklch(0.76 0.17 75);
 }
 
 /* Image overlay */

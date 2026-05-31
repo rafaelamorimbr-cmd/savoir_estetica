@@ -310,9 +310,9 @@ export async function seedTestimonials() {
   const existing = await db.select().from(testimonials).limit(1);
   if (existing.length > 0) return;
   const initialTestimonials: InsertTestimonial[] = [
-    { clientName: "Ana Paula S.", rating: 5, comment: "Atendimento incrível! A Éricka é muito profissional e atenciosa. Fiz o BB Glow e o resultado foi surpreendente. Recomendo demais!", approved: true },
+    { clientName: "Gabriela S.", rating: 5, comment: "Atendimento incrível! A Éricka é muito profissional e atenciosa. Fiz o BB Glow e o resultado foi surpreendente. Recomendo demais!", approved: true },
     { clientName: "Mariana C.", rating: 5, comment: "Já faz 2 anos que sou cliente da Savoir Estética. A qualidade dos serviços é impecável. O ambiente é super aconchegante e a Éricka sempre me deixa com a pele maravilhosa!", approved: true },
-    { clientName: "Fernanda L.", rating: 5, comment: "Fiz a massagem relaxante e foi uma experiência incrível. Saí completamente renovada. Com certeza voltarei!", approved: true },
+    { clientName: "Carolina L.", rating: 5, comment: "Fiz a massagem relaxante e foi uma experiência incrível. Saí completamente renovada. Com certeza voltarei!", approved: true },
     { clientName: "Juliana M.", rating: 5, comment: "O Peeling de Diamante transformou minha pele! Estava com manchas e poros dilatados, e após as sessões minha pele ficou muito mais uniforme e luminosa.", approved: true },
     { clientName: "Camila R.", rating: 5, comment: "Profissional extremamente qualificada e dedicada. O tratamento de mancha senil foi muito eficaz. Recomendo a todos!", approved: true },
     { clientName: "Patrícia A.", rating: 5, comment: "Ambiente lindo, atendimento personalizado e resultados reais. A Éricka tem 8 anos de experiência e isso se vê em cada detalhe do atendimento.", approved: true },

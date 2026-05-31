@@ -123,7 +123,7 @@ export default function HeroSection() {
           <br />
           <span
             className="font-semibold italic"
-            style={{ color: "oklch(0.82 0.14 75)" }}
+            style={{ color: "oklch(0.88 0.18 75)" }}
           >
             Estética
           </span>
@@ -168,8 +168,9 @@ export default function HeroSection() {
             onClick={() => scrollTo("#agendamento")}
             className="font-body font-semibold px-8 py-4 rounded-full text-base shadow-xl hover:shadow-2xl transition-all duration-200 min-w-[200px] hover:scale-105"
             style={{
-              background: "oklch(0.72 0.14 75)",
-              color: "oklch(0.10 0.005 90)",
+              background: "linear-gradient(135deg, oklch(0.82 0.18 75), oklch(0.70 0.20 72))",
+              color: "oklch(0.08 0.005 90)",
+              boxShadow: "0 4px 20px oklch(0.76 0.17 75 / 0.45)",
             }}
           >
             Agendar Consulta
@@ -195,7 +196,7 @@ export default function HeroSection() {
             <div key={stat.label} className="text-center">
               <div
                 className="font-display text-3xl font-semibold"
-                style={{ color: "oklch(0.82 0.14 75)" }}
+                style={{ color: "oklch(0.88 0.18 75)" }}
               >
                 {stat.value}
               </div>
