@@ -12,10 +12,10 @@ export default function HeroSection() {
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full opacity-10"
-          style={{ background: "radial-gradient(circle, oklch(0.58 0.18 345), transparent)" }} />
-        <div className="absolute bottom-1/3 left-1/6 w-64 h-64 rounded-full opacity-8"
-          style={{ background: "radial-gradient(circle, oklch(0.55 0.15 260), transparent)" }} />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full opacity-15"
+          style={{ background: "radial-gradient(circle, oklch(0.72 0.14 75), transparent)" }} />
+        <div className="absolute bottom-1/3 left-1/6 w-64 h-64 rounded-full opacity-10"
+          style={{ background: "radial-gradient(circle, oklch(0.65 0.16 75), transparent)" }} />
         {/* Decorative lines */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5"
           style={{
@@ -38,7 +38,7 @@ export default function HeroSection() {
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-tight mb-4 animate-fade-up">
           Savoir
           <br />
-          <span className="font-semibold italic" style={{ color: "oklch(0.85 0.12 345)" }}>
+          <span className="font-semibold italic" style={{ color: "oklch(0.82 0.14 75)" }}>
             Estética
           </span>
           <span className="font-light text-white/80"> & Massagem</span>
@@ -66,7 +66,8 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <button
             onClick={() => scrollTo("#agendamento")}
-            className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-full text-base shadow-xl hover:shadow-2xl transition-all duration-200 min-w-[200px]"
+            className="font-semibold px-8 py-4 rounded-full text-base shadow-xl hover:shadow-2xl transition-all duration-200 min-w-[200px]"
+            style={{ background: "oklch(0.72 0.14 75)", color: "oklch(0.10 0.005 90)" }}
           >
             Agendar Consulta
           </button>

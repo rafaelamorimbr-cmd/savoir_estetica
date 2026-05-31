@@ -161,7 +161,7 @@ function DashboardTab() {
                 a.appointment.status === "pending" ? "bg-yellow-100 text-yellow-700" :
                 a.appointment.status === "confirmed" ? "bg-green-100 text-green-700" :
                 a.appointment.status === "cancelled" ? "bg-red-100 text-red-700" :
-                "bg-blue-100 text-blue-700"
+                "bg-gray-100 text-gray-700"
               }`}>
                 {a.appointment.status === "pending" ? "Pendente" : a.appointment.status === "confirmed" ? "Confirmado" : a.appointment.status === "cancelled" ? "Cancelado" : "Concluído"}
               </span>
@@ -224,7 +224,7 @@ function AppointmentsTab() {
                       a.appointment.status === "pending" ? "bg-yellow-100 text-yellow-700" :
                       a.appointment.status === "confirmed" ? "bg-green-100 text-green-700" :
                       a.appointment.status === "cancelled" ? "bg-red-100 text-red-700" :
-                      "bg-blue-100 text-blue-700"
+                      "bg-gray-100 text-gray-700"
                     }`}>
                       {a.appointment.status === "pending" ? "Pendente" : a.appointment.status === "confirmed" ? "Confirmado" : a.appointment.status === "cancelled" ? "Cancelado" : "Concluído"}
                     </span>
@@ -420,7 +420,7 @@ function ServicesTab() {
             <div className="flex-1">
               <div className="flex items-center gap-3">
                 <p className="font-body font-semibold text-foreground">{s.name}</p>
-                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${s.category === "facial" ? "bg-pink-100 text-pink-700" : "bg-blue-100 text-blue-700"}`}>
+                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${s.category === "facial" ? "bg-amber-100 text-amber-800" : "bg-gray-100 text-gray-700"}`}>
                   {s.category === "facial" ? "Facial" : "Corporal"}
                 </span>
                 <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${s.active ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"}`}>

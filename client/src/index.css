@@ -45,50 +45,50 @@
 :root {
   --radius: 0.75rem;
 
-  /* Savoir Estética — Identidade Visual: Cinza, Dourado, Rose Gold */
-  --background: oklch(0.99 0.003 60);
-  --foreground: oklch(0.20 0.01 60);
+  /* Savoir Estética — Paleta: Dourado, Preto, Cinza, Branco */
+  --background: oklch(0.99 0.002 90);
+  --foreground: oklch(0.12 0.005 90);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.20 0.01 60);
+  --card-foreground: oklch(0.12 0.005 90);
 
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.20 0.01 60);
+  --popover-foreground: oklch(0.12 0.005 90);
 
-  /* Rose Gold / Dourado como primária */
-  --primary: oklch(0.68 0.10 45);
-  --primary-foreground: oklch(1 0 0);
+  /* Dourado como cor primária */
+  --primary: oklch(0.72 0.14 75);
+  --primary-foreground: oklch(0.10 0.005 90);
 
-  /* Cinza elegante como secundário */
-  --secondary: oklch(0.93 0.005 60);
-  --secondary-foreground: oklch(0.30 0.01 60);
+  /* Cinza médio como secundário */
+  --secondary: oklch(0.92 0.004 90);
+  --secondary-foreground: oklch(0.20 0.005 90);
 
-  --muted: oklch(0.96 0.005 60);
-  --muted-foreground: oklch(0.52 0.01 60);
+  --muted: oklch(0.95 0.003 90);
+  --muted-foreground: oklch(0.50 0.008 90);
 
-  /* Dourado como acento */
-  --accent: oklch(0.78 0.12 75);
-  --accent-foreground: oklch(0.20 0.02 60);
+  /* Dourado escuro como acento */
+  --accent: oklch(0.65 0.16 75);
+  --accent-foreground: oklch(0.10 0.005 90);
 
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.90 0.008 60);
-  --input: oklch(0.90 0.008 60);
-  --ring: oklch(0.68 0.10 45);
+  --border: oklch(0.88 0.006 90);
+  --input: oklch(0.88 0.006 90);
+  --ring: oklch(0.72 0.14 75);
 
-  --chart-1: oklch(0.68 0.10 45);
-  --chart-2: oklch(0.55 0.02 60);
-  --chart-3: oklch(0.78 0.12 75);
-  --chart-4: oklch(0.45 0.01 60);
-  --chart-5: oklch(0.60 0.08 30);
+  --chart-1: oklch(0.72 0.14 75);
+  --chart-2: oklch(0.50 0.005 90);
+  --chart-3: oklch(0.65 0.16 75);
+  --chart-4: oklch(0.35 0.005 90);
+  --chart-5: oklch(0.80 0.10 80);
 
-  --sidebar: oklch(0.97 0.005 60);
-  --sidebar-foreground: oklch(0.20 0.01 60);
-  --sidebar-primary: oklch(0.68 0.10 45);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.93 0.005 60);
-  --sidebar-accent-foreground: oklch(0.20 0.01 60);
-  --sidebar-border: oklch(0.90 0.008 60);
-  --sidebar-ring: oklch(0.68 0.10 45);
+  --sidebar: oklch(0.97 0.003 90);
+  --sidebar-foreground: oklch(0.12 0.005 90);
+  --sidebar-primary: oklch(0.72 0.14 75);
+  --sidebar-primary-foreground: oklch(0.10 0.005 90);
+  --sidebar-accent: oklch(0.92 0.004 90);
+  --sidebar-accent-foreground: oklch(0.12 0.005 90);
+  --sidebar-border: oklch(0.88 0.006 90);
+  --sidebar-ring: oklch(0.72 0.14 75);
 }
 
 @layer base {
@@ -117,14 +117,19 @@
 
 /* Gradient backgrounds */
 .bg-savoir-gradient {
-  background: linear-gradient(135deg, oklch(0.97 0.01 60) 0%, oklch(0.93 0.02 75) 100%);
+  background: linear-gradient(135deg, oklch(0.97 0.003 90) 0%, oklch(0.93 0.01 80) 100%);
 }
+
+/* Hero: preto profundo com vinheta dourada */
 .bg-savoir-hero {
-  /* Cinza escuro elegante com toque dourado — fiel à identidade visual */
-  background: linear-gradient(160deg, oklch(0.28 0.01 60) 0%, oklch(0.35 0.02 60) 50%, oklch(0.30 0.03 55) 100%);
+  background:
+    radial-gradient(ellipse at 70% 30%, oklch(0.72 0.14 75 / 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, oklch(0.65 0.16 75 / 0.12) 0%, transparent 50%),
+    linear-gradient(160deg, oklch(0.10 0.005 90) 0%, oklch(0.14 0.008 80) 50%, oklch(0.12 0.006 85) 100%);
 }
+
 .bg-savoir-dark {
-  background: oklch(0.25 0.01 60);
+  background: oklch(0.12 0.005 90);
 }
 
 /* Flex min-width fix */
@@ -149,10 +154,10 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: oklch(0.96 0.01 340);
+  background: oklch(0.95 0.003 90);
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.75 0.10 345);
+  background: oklch(0.72 0.14 75);
   border-radius: 3px;
 }
 
@@ -167,7 +172,7 @@ html {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px oklch(0.68 0.10 45 / 0.15);
+  box-shadow: 0 20px 40px oklch(0.72 0.14 75 / 0.18);
 }
 
 /* Button active scale */
@@ -202,7 +207,7 @@ button:active {
 
 /* Star rating */
 .star-filled {
-  color: oklch(0.75 0.15 60);
+  color: oklch(0.72 0.14 75);
 }
 
 /* Image overlay */
@@ -215,7 +220,7 @@ button:active {
   position: absolute;
   top: 8px;
   left: 8px;
-  background: oklch(0.18 0.02 260 / 0.8);
+  background: oklch(0.15 0.005 90 / 0.85);
   color: white;
   font-size: 11px;
   font-weight: 700;
@@ -233,8 +238,8 @@ button:active {
   position: absolute;
   top: 8px;
   left: 8px;
-  background: oklch(0.58 0.18 345 / 0.9);
-  color: white;
+  background: oklch(0.72 0.14 75 / 0.9);
+  color: oklch(0.10 0.005 90);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1px;

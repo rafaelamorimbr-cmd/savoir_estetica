@@ -130,8 +130,8 @@ function ServiceCard({ service, onBook }: { service: any; onBook: (name: string)
   const [expanded, setExpanded] = useState(false);
 
   const categoryColor = service.category === "facial"
-    ? "bg-pink-50 text-pink-700 border-pink-100"
-    : "bg-blue-50 text-blue-700 border-blue-100";
+    ? "bg-amber-50 text-amber-800 border-amber-200"
+    : "bg-gray-100 text-gray-700 border-gray-200";
 
   return (
     <div className="bg-white rounded-2xl border border-border p-6 card-hover shadow-sm flex flex-col">
