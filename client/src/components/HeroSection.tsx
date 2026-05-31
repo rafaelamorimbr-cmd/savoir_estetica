@@ -118,16 +118,25 @@ export default function HeroSection() {
         </div>
 
         {/* Título principal */}
-        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-tight mb-4 animate-fade-up">
+        <h1
+          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.05] mb-6 animate-fade-up"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 500,
+            letterSpacing: "-0.02em",
+            background: "linear-gradient(135deg, oklch(0.92 0.16 80) 0%, oklch(0.78 0.20 75) 45%, oklch(0.65 0.18 70) 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            textShadow: "0 2px 20px oklch(0.76 0.17 75 / 0.3)",
+            filter: "drop-shadow(0 2px 8px oklch(0.40 0.10 75 / 0.4))",
+          }}
+        >
           Savoir
           <br />
-          <span
-            className="font-semibold italic"
-            style={{ color: "oklch(0.88 0.18 75)" }}
-          >
-            Estética
-          </span>
-          <span className="font-light text-white/80"> & Massagem</span>
+          <span style={{ fontStyle: "italic", fontWeight: 600 }}>Estética</span>
+          <span style={{ fontWeight: 300 }}> & </span>
+          <span style={{ fontWeight: 500 }}>Massagem</span>
         </h1>
 
         {/* Caption do slide atual */}
