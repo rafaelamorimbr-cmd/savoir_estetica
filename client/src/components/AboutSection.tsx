@@ -38,10 +38,9 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <h2 className="font-display text-5xl md:text-6xl font-semibold text-foreground mb-6 leading-tight">
-              Sua beleza em mãos
-              <br />
-              <span className="italic" style={{ color: "oklch(0.68 0.18 75)" }}>experientes</span>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6 leading-tight">
+              Sua beleza em mãos{" "}
+              <span className="italic whitespace-nowrap" style={{ color: "oklch(0.68 0.18 75)" }}>experientes</span>
             </h2>
 
             <p className="font-body text-base text-muted-foreground leading-relaxed mb-5">
@@ -55,21 +54,21 @@ export default function AboutSection() {
             </p>
 
             {/* Diferenciais */}
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {diferenciais.map((item) => (
                 <div
                   key={item.title}
-                  className="flex items-start gap-3 p-4 rounded-2xl bg-white shadow-sm border"
+                  className="flex items-start gap-3 p-3 sm:p-4 rounded-2xl bg-white shadow-sm border min-w-0"
                   style={{ borderColor: "oklch(0.88 0.012 80)" }}
                 >
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
                     style={{ background: "oklch(0.76 0.17 75 / 0.12)" }}
                   >
-                    <item.icon size={18} style={{ color: "oklch(0.68 0.18 75)" }} />
+                    <item.icon size={16} style={{ color: "oklch(0.68 0.18 75)" }} />
                   </div>
-                  <div>
-                    <p className="font-body font-semibold text-sm text-foreground">{item.title}</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-body font-semibold text-sm text-foreground leading-snug">{item.title}</p>
                     <p className="font-body text-xs text-muted-foreground leading-relaxed mt-1">{item.desc}</p>
                   </div>
                 </div>
