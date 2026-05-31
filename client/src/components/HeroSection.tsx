@@ -119,30 +119,45 @@ export default function HeroSection() {
 
         {/* Título principal */}
         <h1
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.05] mb-6 animate-fade-up"
+          className="leading-[1.05] mb-6 animate-fade-up"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontWeight: 500,
-            letterSpacing: "-0.02em",
-            background: "linear-gradient(135deg, oklch(0.92 0.16 80) 0%, oklch(0.78 0.20 75) 45%, oklch(0.65 0.18 70) 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-            textShadow: "0 2px 20px oklch(0.76 0.17 75 / 0.3)",
-            filter: "drop-shadow(0 2px 8px oklch(0.40 0.10 75 / 0.4))",
+            letterSpacing: "-0.015em",
           }}
         >
-          Savoir
-          <br />
-          <span style={{ fontStyle: "italic", fontWeight: 600 }}>Estética</span>
-          <span style={{ fontWeight: 300 }}> & </span>
-          <span style={{ fontWeight: 500 }}>Massagem</span>
+          {/* Savoir — dourado ouro vibrante */}
+          <span
+            className="block text-6xl sm:text-7xl md:text-8xl lg:text-[9rem]"
+            style={{
+              fontWeight: 600,
+              background: "linear-gradient(135deg, #FFE7A3 0%, #E5B85C 35%, #C99A3D 65%, #B8862E 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              filter: "drop-shadow(0 4px 12px rgba(184, 134, 46, 0.4))",
+            }}
+          >
+            Savoir
+          </span>
+          {/* Estética & Massagem — branco elegante */}
+          <span
+            className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2"
+            style={{
+              color: "rgba(255, 255, 255, 0.92)",
+              fontWeight: 300,
+              letterSpacing: "0.02em",
+            }}
+          >
+            <span style={{ fontStyle: "italic", fontWeight: 400 }}>Estética</span>
+            <span style={{ fontWeight: 200, opacity: 0.75 }}> & </span>
+            <span style={{ fontWeight: 400 }}>Massagem</span>
+          </span>
         </h1>
 
         {/* Caption do slide atual */}
         <p
           key={current}
-          className="font-body text-base md:text-lg text-white/70 max-w-xl mx-auto mb-2 font-light tracking-wide animate-fade-in"
+          className="font-body text-sm md:text-base text-white/55 max-w-xl mx-auto mb-2 font-light tracking-wide animate-fade-in"
         >
           {slides[current].caption}
         </p>
