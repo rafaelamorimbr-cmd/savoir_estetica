@@ -6,6 +6,7 @@ import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
+import { seedServices, seedBusinessHours, seedTestimonials } from "../db";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 
@@ -63,4 +64,10 @@ async function startServer() {
   });
 }
 
-startServer().catch(console.error);
+startServer()
+  .then(() => {
+    seedServices().catch(e => console.warn("[Seed] services:", e));
+    seedBusinessHours().catch(e => console.warn("[Seed] businessHours:", e));
+    seedTestimonials().catch(e => console.warn("[Seed] testimonials:", e));
+  })
+  .catch(console.error);
