@@ -93,6 +93,13 @@ export default function BookingSection() {
         notes: form.notes || undefined,
       });
       setSubmitted(true);
+      setTimeout(() => {
+        const el = document.getElementById("agendamento");
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      }, 50);
     } catch {
       toast.error("Erro ao enviar agendamento. Tente novamente ou entre em contato pelo WhatsApp.");
     }

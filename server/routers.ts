@@ -17,6 +17,7 @@ import {
   getAppointments,
   getApprovedTestimonials,
   getBusinessHours,
+  getServiceById,
   seedBusinessHours,
   seedServices,
   seedTestimonials,
@@ -92,9 +93,23 @@ const appointmentsRouter = router({
       await createAppointment(input);
       // Notify owner
       try {
+        const service = await getServiceById(input.serviceId);
+        const serviceName = service?.name ?? `Serviço #${input.serviceId}`;
+        const dateBR = input.appointmentDate.split("-").reverse().join("/");
+        const content = [
+          "📋 Novo Agendamento — Savoir Estética & Massagem",
+          "",
+          `• Nome:        ${input.clientName}`,
+          `• Serviço:     ${serviceName}`,
+          `• Data:        ${dateBR}`,
+          `• Horário:     ${input.appointmentTime}`,
+          `• Telefone:    ${input.clientPhone}`,
+          `• E-mail:      ${input.clientEmail ?? "não informado"}`,
+          `• Observações: ${input.notes ?? "—"}`,
+        ].join("\n");
         await notifyOwner({
           title: "Novo Agendamento — Savoir Estética",
-          content: `**Cliente:** ${input.clientName}\n**Telefone:** ${input.clientPhone}\n**Data:** ${input.appointmentDate} às ${input.appointmentTime}\n**Email:** ${input.clientEmail ?? "não informado"}\n**Observações:** ${input.notes ?? "—"}`,
+          content,
         });
       } catch (e) {
         console.warn("[Notification] Failed to notify owner:", e);

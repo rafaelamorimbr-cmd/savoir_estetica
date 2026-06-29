@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
             {/* Grid of other testimonials */}
             {displayTestimonials.length > 1 && (
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-                {displayTestimonials.slice(0, 3).map((t, i) => (
+                {displayTestimonials.slice(0, 3).map((t: (typeof displayTestimonials)[number], i: number) => (
                   <div key={t.id} className={`p-5 rounded-2xl border transition-all cursor-pointer ${i === safeIndex ? "border-primary bg-primary/5" : "border-border bg-white hover:border-primary/50"}`} onClick={() => setCurrent(i)}>
                     <StarRating rating={t.rating} />
                     <p className="font-body text-sm text-muted-foreground mt-3 line-clamp-3 italic">"{t.comment}"</p>
